@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MathBase</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>MathBase</h1>
+    <input type="search" id="search" placeholder="Поиск...">
+  </header>
+  <main>
+    <h2>
+		<p>Формулировка</p>
+	</h2>
+	<p>$$\forall P_{n}(x) \in \mathbb{R}[x] \space \exists a \in \mathbb{R}, \space Q_{n-1} \in \mathbb{R}[x]: \space P_{n}(x)=(x-a)Q_{n-1}(x)+P(a) \space$$ </p>	
+    <h2>
+		<p>Доказательство</p>
+	</h2>
+	<p>$$P_{n}(x)=(x-a)Q_{n-1}(x)+R(x), \space degR(x) &lt; deg(x-a)=1 \space \Rightarrow \space degR(x)=0 
+	\space \Rightarrow \space R(x)=r \space (r \in \mathbb{R});$$</p>
+	<p>$$P(a)=(a-a)*Q_{n-1}(x)+r = r \space \Rightarrow\space P_{n}(x)=(x-a)Q_{n-1}(x)+P(a) \space Q.E.D.$$</p>
+	<h2>
+	</h2>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
