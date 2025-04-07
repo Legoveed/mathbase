@@ -36,3 +36,23 @@ a {
 a:hover {
   color: #4CAF50;
 }
+
+p {
+  /* Перенос длинных слов */
+  overflow-wrap: break-word;
+  word-wrap: break-word; /* Для старых браузеров */
+  
+  /* Автоматические переносы слов (требует lang в HTML) */
+  hyphens: auto;
+  -webkit-hyphens: auto; /* Для Safari */
+  -ms-hyphens: auto; /* Для IE */
+  
+  /* Гарантирует, что блок не выйдет за границы экрана */
+  max-width: 100%;
+  
+  /* Опционально: добавляет отступы для красоты */
+  padding: 0 10px;
+  
+  /* Опционально: правильный расчет размеров */
+  box-sizing: border-box;
+}
