@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MathBase</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    .formula-block {
+      max-width: 100%;
+      overflow-x: auto;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    .mjx-chtml {
+      display: block !important;
+    }
+  </style>
   <link rel="stylesheet" href="styles.css">
 </head>
+  
 <body>
   <header>
     <h1>MathBase</h1>
@@ -14,29 +26,20 @@
   </header>
   <main>
     <h2>
-		<p>Задание</p>
-	</h2>
-	<p>$$1 + 2 + \dots + n = \frac{n(n+1)}{2}$$ </p>	
+	<p align="justify">Задание</p>
+    </h2>
+	<div class="formula-block">
+		\[\textbf{Доказать методом математической индукции: }1+2+\dots+n=/frac{n(n+1)}{2}\] 
+	</div>	
     <h2>
-		<p>Доказательство (методом математической индукции)</p>
-	</h2>
-	<h2>
-
-$$
-\textbf{База индукции: Для} ( n = 1 ):
-[ 1 = \frac{1(1+1)}{2} = 1. ]
-
-\textbf{Предположение индукции: Пусть для} ( n = k ) \textbf{верно}:
-[ 1 + 2 + \dots + k = \frac{k(k+1)}{2}. ]
-
-\textbf{Шаг индукции: Докажем для} ( n = k + 1 ):
-[
-1 + 2 + \dots + k + (k+1) = \frac{k(k+1)}{2} + (k+1) = \frac{(k+1)(k + 2)}{2}.
-]
-Полученное выражение совпадает с формулой при ( n = k + 1 ). 
-$$
-	
-	</h2>
+	<p align="justify">Доказательство</p>
+    </h2>
+	<div class="formula-block">
+    \[
+    P_{n}(x)=(x-a)Q_{n-1}(x)+R(x),\quad \deg R(x) < \deg(x-a)=1 \ \Rightarrow \ \deg R(x)=0 \ \Rightarrow \ R(x)=r \ (r \in \mathbb{R});\]
+    \[P(a)=(a-a) \cdot Q_{n-1}(x)+r = r \ \Rightarrow \ P_{n}(x)=(x-a)Q_{n-1}(x)+P(a) \quad \text{Q.E.D.}
+    \]
+  	</div>
   </main>
   <script src="script.js"></script>
 </body>
