@@ -29,16 +29,15 @@
 	<p align="justify">Задание</p>
     </h2>
 	<div class="formula-block">
-		\[\textbf{Доказать методом математической индукции: }1+2+\dots+n=/frac{n(n+1)}{2}\] 
+		\[\textbf{Доказать методом математической индукции: }1+2+\dots+n=\frac{n(n+1)}{2}\] 
 	</div>	
     <h2>
 	<p align="justify">Доказательство</p>
     </h2>
 	<div class="formula-block">
-    \[
-    P_{n}(x)=(x-a)Q_{n-1}(x)+R(x),\quad \deg R(x) < \deg(x-a)=1 \ \Rightarrow \ \deg R(x)=0 \ \Rightarrow \ R(x)=r \ (r \in \mathbb{R});\]
-    \[P(a)=(a-a) \cdot Q_{n-1}(x)+r = r \ \Rightarrow \ P_{n}(x)=(x-a)Q_{n-1}(x)+P(a) \quad \text{Q.E.D.}
-    \]
+    	\[\textbf{База: } n=1: \space \frac{1(1+2)}{2}=1\]
+	\[\textbf{Предположение: } n=k: \space 1+2+\dots+k=\frac{k(k+1)}{2}\]
+	\[\textbf{Шаг: } n=k+1: \space 1+2+\dots+k+(k+1)=\frac{k(k+1)}{2}+(k+1)=\frac{(k+1)(k+2}{2}\textbf{, что совпадает с подстановкой в исходную формулу значения }k+1\spaceQ.E.D.\]	
   	</div>
   </main>
   <script src="script.js"></script>
