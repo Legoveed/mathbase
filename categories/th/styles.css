@@ -56,3 +56,9 @@ p {
   /* Опционально: правильный расчет размеров */
   box-sizing: border-box;
 }
+
+.MathJax, .mjx-chtml {
+  overflow-x: auto;
+  max-width: 100%;
+  display: inline-block; /* Или flex, в зависимости от контекста */
+}
