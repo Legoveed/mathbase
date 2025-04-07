@@ -30,15 +30,15 @@
     </h2>
 	<div class="formula-block">
     \[\textbf{Пусть } a^{[n]}=a(a-h)\dots (a-(n-1)h), \space a^{[0]}=1.\]
-		\[\textbf{Доказать методом математической индукции: }(a+b)^{[n]}=\] 
+		\[\textbf{Доказать методом математической индукции: }(a+b)^{[n]}=\sum_{m=0}^{n}\binom{n}{m}a^{[n-m]}b^{[m]}] 
 	</div>	
     <h2>
 	<p align="justify">Доказательство</p>
     </h2>
 	<div class="formula-block">
-    \[\textbf{База } n=1: \space 1=2^{1}-1=2\]
-	  \[\textbf{Предположение } n=k: \space 1+2+2^{2}+\dots+2^{k-1}=2^{k}-1\]
-	  \[\textbf{Шаг } n=k+1: \space 2^{k}-1+2^{k}=2\cdot 2^{k}-1 = 2^{k+1}-1 \textbf{, что совпадает с подстановкой в свёртку исходной формулы значения }k+1 \space Q.E.D.\]	
+    	\[\textbf{База } n=0: \space 1=(a+b)^{[0]}=\sum_{m=0}^{0}\binom{0}{0}a^{[0]}b^{[0]}=1\cdot 1 =1\]
+	  \[\textbf{Предположение } n=k: \space(a+b)^{[k]}=\sum_{m=0}^{k}\binom{k}{m}a^{[k-m]}b^{[m]}\]
+	  \[\textbf{Шаг } n=k+1: \space 2^{k}-1+2^{k}=2\cdot 2^{k}-1 = 2^{k+1}-1 \textbf{, что совпадает с подстановкой в исходную формулу значения }k+1 \space Q.E.D.\]	
   	</div>
   </main>
   <script src="script.js"></script>
