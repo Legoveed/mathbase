@@ -41,7 +41,8 @@
 	  \[\textbf{Шаг } n=k+1:  \space(a+b)^{[k+1]}=(a+b-kh)(a+b)^{[k]}=(a+b-kh)\sum_{m=0}^{k}\binom{k}{m}a^{[k-m]}b^{[m]}= \]
 	  \[=\sum_{m=0}^{k}\binom{k}{m} \left( (a-(k-m)h)a^{[k-m]}b^{[m]}+(b-mh)a^{[k-m]}b^{[m]} \right)=\sum_{m=0}^{k}\binom{k}{m} a^{[k-m+1]}b^{[m]} + \sum_{m=0}^{k}\binom{k}{m} a^{[k-m]}b^{[m+1]} \]
 	\[\textbf{Сменим индексацию во второй сумме с }m=0\textbf{ на }m=1: \space \sum_{m=1}^{k+1}\binom{k}{m-1} a^{[k-m+1]}b^{[m]}. \]
-		\[ \textbf{Теперь при } m=0\textbf{ вклад есть только от первой суммы, при }m=k+1 \textbf{ - только от второй суммы, а при остальных }m \sum_{m=0}^{k+1} \left( \binom{k}{m} + \binom{k}{m-1} \right) a^{[k-m+1]}b^{[m]} = \sum_{m=0}^{k+1}\binom{k+1}{m} a^{[k+1-m]}b^{[m]} \textbf{, что совпадает с подстановкой в исходную формулу значения }k+1 \space Q.E.D.\]	
+		\[ \textbf{Теперь при } m=0\textbf{ вклад есть только от первой суммы, при }m=k+1 \textbf{ - только от второй суммы, а при остальных }m \space \sum_{m=0}^{k+1} \left( \binom{k}{m} + \binom{k}{m-1} \right) a^{[k-m+1]}b^{[m]} = \]
+		\[ =\sum_{m=0}^{k+1}\binom{k+1}{m} a^{[k+1-m]}b^{[m]} \textbf{, что совпадает с подстановкой в исходную формулу значения }k+1 \space Q.E.D.\]	
   	</div>
   </main>
   <script src="script.js"></script>
