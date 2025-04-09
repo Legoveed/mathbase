@@ -38,7 +38,8 @@
 	<div class="formula-block">
     	\[\textbf{База } n=0: \space 1=(a+b)^{[0]}=\sum_{m=0}^{0}\binom{0}{0}a^{[0]}b^{[0]}=1\cdot 1 =1\]
 	  \[\textbf{Предположение } n=k: \space(a+b)^{[k]}=\sum_{m=0}^{k}\binom{k}{m}a^{[k-m]}b^{[m]}\]
-	  \[\textbf{Шаг } n=k+1: \space 2^{k}-1+2^{k}=2\cdot 2^{k}-1 = 2^{k+1}-1 \textbf{, что совпадает с подстановкой в исходную формулу значения }k+1 \space Q.E.D.\]	
+	  \[\textbf{Шаг } n=k+1:  \space(a+b)^{[k+1]}=(a+b-kh)(a+b)^{[k]}=(a+b-kh)\sum_{m=0}^{k}\binom{k}{m}a^{[k-m]}b^{[m]}= \]
+	  \[=\sum_{m=0}^{k}\binom{k}{m} \left( (a-(k-m)h)a^{[k-m]}b^{[m]}+(b-mh)a^{[k-m]}b^{[m]} \right)=\sum_{m=0}^{k}\binom{k}{m} \left( a^{[k-m+1]}b^{[m]} + a^{[k-m]}b^{[m+1]} \right) = \sum_{m=0}^{k}  a^{[k-m+1]}b^{[m]} \left( \binom{k}{m}   + \binom{k}{m-1} \right)	\textbf{, что совпадает с подстановкой в исходную формулу значения }k+1 \space Q.E.D.\]	
   	</div>
   </main>
   <script src="script.js"></script>
