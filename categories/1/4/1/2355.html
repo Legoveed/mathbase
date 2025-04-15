@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    .formula-block {
+      max-width: 100%;
+      overflow-x: auto;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    .mjx-chtml {
+      display: block !important;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  
+<body>
+  <header>
+    <h1>MathBase</h1>
+    <input type="search" id="search" placeholder="Поиск...">
+  </header>
+  <main>
+    <h2>
+	<p align="justify">Задание</p>
+    </h2>
+	<div class="formula-block">
+		\[\textbf{Доказать равенство: } \int_{0}^{+\infty} f(ax+\frac{b}{x}) \,dx =\frac{1}{a}\int_{0}^{+\infty} f(\sqrt{x^{2}+4ab}) \,dx. \] 
+	</div>	
+    <h2>
+	<p align="justify">Доказательство</p>
+    </h2>
+	<div class="formula-block">
+	\[ \textbf{Введём замену в левой части равенства: } x = \sqrt{\frac{b}{a}}e^{t}, t = \ln \sqrt{\frac{a}{b}}x: \space dx = \sqrt{\frac{b}{a}}e^{t}dt, 
+    \lim_{x \to 0^{+}}\ln \sqrt{\frac{a}{b}}x = -\infty, \space \lim_{x \to +\infty}\ln \sqrt{\frac{a}{b}}x = +\infty\]
+    \[ \int_{0}^{+\infty} f(ax+\frac{b}{x}) \,dx = \sqrt{\frac{b}{a}}\int_{-\infty}^{+\infty}f(2\sqrt{ab}\,	\text{ch} \space t)e^{t} \,dt = 
+\sqrt{\frac{b}{a}}\left( \int_{-\infty}^{0}f(2\sqrt{ab}	\,\text{ch} \space t)e^{t} \,dt + \int_{0}^{+\infty}f(2\sqrt{ab}	\,\text{ch} \space t)e^{t} dt \right) =\]
+\[ = \sqrt{\frac{b}{a}}\left( \int_{0}^{+\infty}f(2\sqrt{ab}	\,\text{ch} \space t)e^{-t} \,dt + \int_{0}^{+\infty}f(2\sqrt{ab}	\,\text{ch} \space t)e^{t} \,dt \right) = 2\sqrt{\frac{b}{a}}\int_{0}^{+\infty}f(2\sqrt{ab}	\,\text{ch} \space t)	\,\text{ch} \space t \,dt.\]
+ \[ \textbf{Введём замену в правой части равенства: }x = 2\sqrt{ab}\,\text{sh} t, \space t = \text{arsh}\frac{x}{2\sqrt{ab}}: dx = 2\sqrt{ab}\,\text{ch} \,t \,dt, \space
+    \lim_{x \to 0^{+}} \text{arsh}\frac{x}{2\sqrt{ab}} = 0, \space \lim_{x \to +\infty}\text{arsh}\frac{x}{2\sqrt{ab}} = +\infty\]  
+    \[ \frac{1}{a}\int_{0}^{+\infty} f(\sqrt{x^{2}+4ab}) \,dx = \frac{2\sqrt{ab}}{a}\int_{0}^{+\infty} f(2\sqrt{ab}	\,\text{ch} \space t)	\,\text{ch} \space t \,dt =
+    2\sqrt{\frac{b}{a}}\int_{0}^{+\infty} f(2\sqrt{ab}	\,\text{ch} \space t)	\,\text{ch} \space t \,dt \textbf{, то есть выражения совпадают Q.E.D.}\]
+  
+  	</div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
