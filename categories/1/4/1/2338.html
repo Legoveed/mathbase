@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    .formula-block {
+      max-width: 100%;
+      overflow-x: auto;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    .mjx-chtml {
+      display: block !important;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  
+<body>
+  <header>
+    <h1>MathBase</h1>
+    <input type="search" id="search" placeholder="Поиск...">
+  </header>
+  <main>
+    <h2>
+	<p align="justify">Задание</p>
+    </h2>
+	<div class="formula-block">
+		\[\textbf{Вычислить интеграл: } \int_{2}^{+\infty} \frac{dx}{x^{2}+x-2}. \] 
+	</div>	
+    <h2>
+	<p align="justify">Решение</p>
+    </h2>
+	<div class="formula-block">
+    	\[ \textbf{Разложим подинтегральное выражение на простые дроби методом неопределённых коэффициентов: } \frac{1}{x^2+x-2} = \frac{1}{(x+2)(x-1)} = \frac{A}{x+2}+\frac{B}{x-1} \Rightarrow Ax-A+Bx+2B \equiv 1 \Rightarrow  
+    \begin{cases}
+        A+B=0
+        -A+2B=1
+    \end{cases} 
+\Rightarrow A = -\frac{1}{3}, \space B = \frac{1}{3}.\] 
+    \[ \int_{2}^{+\infty} \frac{dx}{x^{2}+x-2} = \int_{2}^{+\infty} \left(-\frac{1}{3(x+2)}+\frac{1}{3(x-1)}\right) \,dx = \lim_{t \to +\infty} \left(-\frac{1}{3}\ln|x+2|+\frac{1}{3}\ln|x-1|\right)\Biggr|_{2}^{t}=\]
+    \[ = \lim_{t \to +\infty} \frac{1}{3}\ln\frac{t-1}{t+2} - \left( -\frac{1}{3}\ln 4 +\frac{1}{3}\ln1\right) = 0 - \left(-\frac{1}{3}\ln 4 +0\right) = \frac{1}{3}\ln 4 = \frac{2}{3} \ln 2.\]
+
+  	</div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
