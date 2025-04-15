@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    .formula-block {
+      max-width: 100%;
+      overflow-x: auto;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    .mjx-chtml {
+      display: block !important;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  
+<body>
+  <header>
+    <h1>MathBase</h1>
+    <input type="search" id="search" placeholder="Поиск...">
+  </header>
+  <main>
+    <h2>
+	<p align="justify">Задание</p>
+    </h2>
+	<div class="formula-block">
+		\[\textbf{Вычислить интеграл: } \int_{0}^{1} \ln x \,dx \] 
+	</div>	
+    <h2>
+	<p align="justify">Решение</p>
+    </h2>
+	<div class="formula-block">
+    	\[\int_{0}^{1} \ln x \,dx = \lim_{t \to 0^{+}} \int_{t}^{1} \ln x \,dx. \textbf{ Интегрируем по частям: } u = \ln x, \space du = \frac{1}{x}; \space dv = dx, \space v = x;\]
+\[ \lim_{t \to 0^{+}} \left(x \ln x \Biggr|_{t}^{1} - \int_{t}^{1} \,dx \right) = \lim_{t \to 0^{+}} \left( x \ln x - x \right) \Biggr|_{t}^{1} = 1 \cdot \ln 1 - 1 - \lim_{t \to 0^{+}} \left( t \ln t - t \right) = -1 - (0 - 0) = -1.\]
+  	</div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
