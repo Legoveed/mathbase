@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    .formula-block {
+      max-width: 100%;
+      overflow-x: auto;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    .mjx-chtml {
+      display: block !important;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  
+<body>
+  <header>
+    <h1>MathBase</h1>
+    <input type="search" id="search" placeholder="Поиск...">
+  </header>
+  <main>
+    <h2>
+	<p align="justify">Задание</p>
+    </h2>
+	<div class="formula-block">
+		\[\textbf{Вычислить интеграл: } \int_{-\infty}^{+\infty} \frac{dx}{(x^{2}+x+1)^{2}}. \] 
+	</div>	
+    <h2>
+	<p align="justify">Решение</p>
+    </h2>
+	<div class="formula-block">
+    	\[ \textbf{Выделим полный квадрат: } \int_{-\infty}^{+\infty} \frac{dx}{(x^{2}+x+1)^{2}} = \int_{-\infty}^{+\infty} \frac{dx}{\left(\left( x+\frac{1}{2} \right)^{2}+\frac{3}{4}\right)^{2}}. \]
+      \[ \textbf{Введём замену } t = x+\frac{1}{2}: \space dt = dx, \space \lim_{x \to -\infty} \left(x+\frac{1}{2}\right) = -\infty, \space \lim_{x \to +\infty} \left(x+\frac{1}{2}\right) = +\infty\]
+      \[ \int_{-\infty}^{+\infty} \frac{dt}{\left( t^{2}+\frac{3}{4}\right)^{2}}, \textbf{ введём замену } t = \frac{\sqrt{3}}{2} \mathit{tg} \space \theta, \space \theta = \mathit{arctg}\space \frac{2t}{\sqrt{3}}:\]
+    \[\space dt = \frac{\sqrt{3}}{2}\sec^{2}\theta d\theta, \space t^{2}+\frac{3}{4} = \frac{3}{4}\mathit{tg}^{2}\theta+\frac{3}{4} = \frac{3}{4}\sec^{2}\theta, \lim_{t \to -\infty}\mathit{arctg}\space \frac{2t}{\sqrt{3}} = -\frac{\pi}{2}, \space \lim_{t \to +\infty}\mathit{arctg}\space \frac{2t}{\sqrt{3}} = \frac{\pi}{2};\]
+    \[ \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{\frac{\sqrt{3}}{2}\sec^{2}\theta}{\left(\frac{3}{4}\sec^{2}\theta\right)^{2}}\,d\theta = \frac{8}{3\sqrt{3}}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos^{2}\theta \,d\theta = \frac{4}{3\sqrt{3}}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(1+\cos 2\theta) \,d\theta = \frac{4}{3\sqrt{3}}\left(\theta+\frac{\sin 2\theta}{2} \right)\Biggr|_{-\frac{\pi}{2}}^{\frac{\pi}{2}} = \frac{4}{3\sqrt{3}}\left(\frac{\pi}{2}+0-\left( -\frac{\pi}{2}+0 \right) \right) =  \frac{4\pi}{3\sqrt{3}}.\]
+  	</div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
