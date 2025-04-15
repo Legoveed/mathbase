@@ -29,13 +29,16 @@
 	<p align="justify">Задание</p>
     </h2>
 	<div class="formula-block">
-		\[\textbf{Вычислить интеграл: } \int_{0}^{+\infty} \frac{x^{2}+1}{x^{4}+1}. \] 
+		\[\textbf{Вычислить интеграл: } \int_{0}^{+\infty} \frac{x^{2}+1}{x^{4}+1} \,dx. \] 
 	</div>	
     <h2>
 	<p align="justify">Решение</p>
     </h2>
 	<div class="formula-block">
-    	
+    	\[ \int_{0}^{+\infty} \frac{x^{2}+1}{x^{4}+1}\,dx = \int_{0}^{+\infty} \frac{1+\frac{1}{x^{2}}}{x^{2}+\frac{1}{x^{2}}}\,dx =
+\int_{0}^{+\infty} \frac{1+\frac{1}{x^{2}}}{\left( x-\frac{1}{x}\right)^{2} +2}\,dx\]
+	\[ \textbf{Введём замену } t = x - \frac{1}{x}: \space dt = \left( 1+\frac{1}{x^{2}}\right)dx, \space \lim_{x \to 0^{+}} \left(x-\frac{1}{x} \right) = -\infty, \space \lim_{x \to +\infty} \left(x-\frac{1}{x} \right) = +\infty\]
+	\[\int_{-\infty}^{+\infty}\frac{dt}{t^2+2} = \frac{1}{\sqrt{2}}\mathit{arctg}\space\frac{t}{\sqrt{2}} \Biggr|_{-\infty}^{+\infty}	= \frac{1}{\sqrt{2}}\left( \lim_{t \to +\infty}\mathit{arctg}\space\frac{t}{\sqrt{2}} - \lim_{t \to -\infty}\mathit{arctg}\space\frac{t}{\sqrt{2}} \right) = \frac{1}{\sqrt{2}}\left( \frac{\pi}{2} - \left( -\frac{\pi}{2}\right) \right) = \frac{\pi}{\sqrt{2}} .\]
   	</div>
   </main>
   <script src="script.js"></script>
