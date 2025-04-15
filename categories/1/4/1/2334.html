@@ -29,15 +29,13 @@
 	<p align="justify">Задание</p>
     </h2>
 	<div class="formula-block">
-		\[\textbf{Определить область существования и выразить через эйлеровы интегралы: } \int_{0}^{+\infty} \frac{x^{m-1}}{1+x^{n}} \,dx, \space n \ge 0\] 
+		\[\textbf{Вычислить интеграл: } \int_{a}^{+\infty} \frac{dx}{x^{2}} \,dx, \space a > 0] 
 	</div>	
     <h2>
 	<p align="justify">Решение</p>
     </h2>
 	<div class="formula-block">
-    	\[ \textbf{Найдём область существования, определив условия существования подинтегральной функции на концах промежутка интегрирования. } \lim_{x\to 0} \frac{x^{m-1}}{1+x^{n}} = \lim_{x\to 0} x^{m-1} \Rightarrow m \ge 0\]
-	\[ \lim_{x\to +\infty} \frac{x^{m-1}}{1+x^{n}} = \lim_{x\to +\infty} x^{m-n-1} \Rightarrow n \ge m; \Rightarrow 0 \le m \le n\]	
-	\[ \textbf{Выразим интеграл через Бета-функцию, введя замену } t = x^{n} \Rightarrow x = t^{\frac{1}{n}}, \space dx = \frac{1}{n} t^{\frac{1}{n} -1} dt:\]
+    	\[ \int_{a}^{+\infty} \frac{dx}{x^{2}} \,dx = \lim_{t \to +\infty} \int_{a}^{t} \frac{dx}{x^{2}} \,dx = \lim_{t \to +\infty} \( -\frac{1}{x} \Biggr|_{a}^{t}\) = \lim_{t \to +\infty} \( -\frac{1}{t} \) +\frac{1}{a} = \frac{1}{a} \qedsymbol\]
   	</div>
   </main>
   <script src="script.js"></script>
