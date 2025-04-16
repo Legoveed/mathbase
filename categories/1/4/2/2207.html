@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    .formula-block {
+      max-width: 100%;
+      overflow-x: auto;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    .mjx-chtml {
+      display: block !important;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  
+<body>
+  <header>
+    <h1>MathBase</h1>
+    <input type="search" id="search" placeholder="Поиск...">
+  </header>
+  <main>
+    <h2>
+	<p align="justify">Задание</p>
+    </h2>
+	<div class="formula-block">
+		\[\textbf{Применяя формулу Ньютона-Лейбница, найти следующий определённый интеграл и нарисовать соответствующую криволинейную площадь: } \int_{0}^{\pi}\sin x \,dx.\]
+    <h2>
+	<p align="justify">Решение</p>
+    </h2>
+	<div class="formula-block">
+    	\[\int_{0}^{\pi}\sin x \,dx = (-\cos x)\Biggr|_{0}^{\pi} = -\cos\pi - (-\cos 0) = 2.\]    
+  	</div>
+    <h2>
+    <p align="justify">Вид площади</p>
+      </h2>
+    <iframe src="https://www.desmos.com/calculator/eaahojenba?lang=ru" width="100%" style="min-height:200px"></iframe>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
