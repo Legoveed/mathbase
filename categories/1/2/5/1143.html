@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    .formula-block {
+      max-width: 100%;
+      overflow-x: auto;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    .mjx-chtml {
+      display: block !important;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  
+<body>
+  <header>
+    <h1>MathBase</h1>
+    <input type="search" id="search" placeholder="Поиск...">
+  </header>
+  <main>
+    <h2>
+	<p align="justify">Задание</p>
+    </h2>
+	<div class="formula-block">
+		\[\textbf{Найти производные }y_{x}' ,\, y_{x^{2}}' ',\,y_{x^{3}}' ' ' \textbf{ от функции, заданной параметрически: } x = e^{t}\cos t ,\, y = e^{t} \sin t. \] 
+	</div>	
+    <h2>
+	<p align="justify">Решение</p>
+    </h2>
+	<div class="formula-block">
+    	\[ x_{t}' = (e^{t}\cos t)' = (e^{t})'\cos t + e^{t}(\cos t)' = e^{t}(\cos t - \sin t),\, y_{t}' = (e^{t}\sin t)' = (e^{t})'\sin t + e^{t}(\sin t)' = e^{t}(\sin t + \cos t) \]
+    \[  y_{x}' = \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{e^{t}(\sin t + \cos t)}{e^{t}(\cos t - \sin t)} = \frac{\sin t + \cos t}{\cos t - \sin t}.\]
+    \[  y_{x^{2}}' ' = \frac{d^{2}y}{dx^{2}} = \frac{\frac{d}{dt} \left( \frac{dy}{dx} \right)}{\frac{dx}{dt}} = \frac{\left( \frac{\sin t + \cos t}{\cos t - \sin t}\right)'}{e^{t}(\cos t - \sin t)};\]
+    \[ \left( \frac{\sin t + \cos t}{\cos t - \sin t}\right)' = \frac{(\sin t + \cos t)'(\cos t - \sin t) - (\cos t - \sin t)'(\sin t + \cos t)}{(\cos t - \sin t)^{2}} = \frac{(\cos t - \sin t)^{2} + (\sin t + \cos t)^{2}}{(\cos t - \sin t)^{2}} = \]
+\[ =\frac{\cos^{2}t-2\cos t\sin t+\sin^{2}t + \sin^{2}t+2\sin t\cos t + \cos^{2} t}{(\cos t - \sin t)^{2}} = \frac{2}{(\cos t - \sin t)^{2}} \Rightarrow\]
+    \[\Rightarrow y_{x^{2}}' ' = \frac{2e^{-t}}{(\cos t - \sin t)^{3}} = \frac{e^{-t}}{\sqrt{2}\cos^{3}\left(t+\frac{\pi}{4}\right)}.\]
+    \[y_{x^{3}}' ' ' = \frac{d^{3}y}{dx^{3}} = \frac{\frac{d}{dt} \left( \frac{d^{2}y}{dx^{2}} \right)}{\frac{dx}{dt}} = \frac{\left( \frac{e^{-t}}{\sqrt{2}\cos^{3}\left(t+\frac{\pi}{4}\right)}\right)'}{e^{t}(\cos t - \sin t)};\]
+    \[ \left( \frac{e^{-t}}{\sqrt{2}\cos^{3}\left(t+\frac{\pi}{4}\right)}\right)' = \frac{\left(e^{-t}\right)'\sqrt{2}\cos^{3}\left(t+\frac{\pi}{4}\right) - e^{-t}\left(\sqrt{2}\cos^{3}\left(t+\frac{\pi}{4}\right)\right)'}{2\cos^{6}\left(t+\frac{\pi}{4}\right)} =
+    -\frac{e^{-t}\cos^{3}\left(t+\frac{\pi}{4}\right)-3e^{-t}\cos^{2}\left(t+\frac{\pi}{4}\right)\sin\left(t+\frac{\pi}{4}\right)}{\sqrt{2}\cos^{6}\left(t+\frac{\pi}{4}\right)} =\]
+    \[ =  -\frac{e^{-t}\cos\left(t+\frac{\pi}{4}\right)-3e^{-t}\sin\left(t+\frac{\pi}{4}\right)}{\sqrt{2}\cos^{4}\left(t+\frac{\pi}{4}\right)} = \frac{e^{-t}\left(\frac{3\sqrt{2}}{2}(\cos x + \sin x) - \frac{\sqrt{2}}{2}(\cos x - \sin x) \right)}{\sqrt{2}\cos^{4}\left(t+\frac{\pi}{4}\right)} = \frac{e^{-t}\left(2\sin x + \cos x \right)}{\cos^{4}\left(t+\frac{\pi}{4}\right)}.\]
+  	</div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
